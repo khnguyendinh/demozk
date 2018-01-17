@@ -1,0 +1,7 @@
+<zk>
+    <window border="normal" title="DemoZk Khoand">
+        <vlayout>
+            <label value="khooooooo"/>
+        </vlayout>
+    </window>
+</zk>
