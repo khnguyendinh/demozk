@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="demozk:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="khoand.demozk.war">
+      <element id="artifact" artifact-name="demozk:war exploded" />
+    </root>
+  </artifact>
+</component>
