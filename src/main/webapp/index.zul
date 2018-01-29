@@ -1,9 +1,18 @@
 <zk>
-	<window apply="org.zkoss.bind.BindComposer"
-		viewModel="@id('vm')@init('khoand.demozk.MyViewModel')"
-		validationMessages="@id('vmsgs')">
-		<hlayout>count: <label value="@load(vm.count)" /></hlayout>
-		<button label="add" onClick="@command('cmd')"/>
-		<a href="/pages/car/car.zul">Hello</a>
-	</window>
+    <window apply="org.zkoss.bind.BindComposer"
+            viewModel="@id('vm')@init('khoand.demozk.MyViewModel')"
+            validationMessages="@id('vmsgs')">
+        <hlayout>count:
+            <label value="@load(vm.count)"/>
+        </hlayout>
+        <vlayout>
+
+            <button label="add" onClick="@command('cmd')"/>
+            <a href="/pages/car/car.zul">Hello</a>
+            <a href="/pages/car/hello.zul">hello.zul</a>
+            <a href="/pages/car/search.zul">search.zul</a>
+            <a href="/pages/car/searchMvc.zul">searchMvc.zul</a>
+            <a href="/pages/car/searchMvvm.zul">searchMvvm.zul</a>
+        </vlayout>
+    </window>
 </zk>
