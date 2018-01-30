@@ -1,0 +1,42 @@
+<zk>
+    <label>welcome Hflex and Vflex</label>
+    <vlayout style="overflow:auto" tooltiptext="rowSum">
+        <hlayout style="overflow:auto" tooltiptext="row1">
+            <vlayout width="300px" height="200px">
+                <label style="font-size:20px">Example 1</label>
+                <datebox/>
+                <div vflex="1" style="background:yellow"></div>
+            </vlayout>
+            <vlayout width="300px" height="200px">
+                <label style="font-size:20px">Example 2</label>
+                <datebox/>
+                <tabbox vflex="1">
+                    <tabs>
+                        <tab label="Home"/>
+                        <tab label="Direction"/>
+
+                    </tabs>
+                    <tabpanels>
+                        <tabpanel style="overflow:auto">
+                            <div height="500px" width="100%" style="background:yellow"/>
+
+                        </tabpanel>
+                        <tabpanel></tabpanel>
+                    </tabpanels>
+                </tabbox>
+            </vlayout>
+            <vlayout width="300px" height="200px">
+                <label style="font-size:20px">Proportional Flexibility</label>
+                <div vflex="1" hflex="1">
+                    <div style="background:blue" vflex="1" hflex="1"></div>
+                    <div style="background:red" vflex="2" hflex="1"></div>
+                </div>
+            </vlayout>
+            <hlayout width="200px">
+                <div style="background: blue" hflex="1">1</div>
+                <div style="background: yellow" hflex="2">2</div>
+            </hlayout>
+        </hlayout>
+    </vlayout>
+
+</zk>

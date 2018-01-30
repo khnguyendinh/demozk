@@ -13,6 +13,7 @@
             <a href="/pages/car/search.zul">search.zul</a>
             <a href="/pages/car/searchMvc.zul">searchMvc.zul</a>
             <a href="/pages/car/searchMvvm.zul">searchMvvm.zul</a>
+            <a href="/pages/chapter/chap1/chapter1.zul">Chapter 1</a>
         </vlayout>
     </window>
 </zk>
