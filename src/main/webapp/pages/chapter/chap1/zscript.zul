@@ -1,0 +1,17 @@
+<window id="win1" >
+    <!-- https://www.zkoss.org/wiki/Zscript,_java,_EL -->
+    <zscript><![CDATA[
+        win1.title="demo zscript";
+        name = "khoa";
+        list= new String[]{"monday","tuesday", "thurday"};
+    ]]>
+    </zscript>
+    <label>Bạn ${name}</label>
+    <div>
+        <button label="Say Hello" onClick="sayHello()"/>
+    </div>
+    <listbox width="200px">
+        <listitem forEach="${list}" label="${each}"/>
+    </listbox>
+    <zscript src="sayHello.zs"/>
+</window>

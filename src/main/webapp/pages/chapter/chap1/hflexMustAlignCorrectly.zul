@@ -1,0 +1,6 @@
+<zk>
+    <div width="200px">
+        <div style="background: blue" hflex="1">1</div><!-- not work since it won't be aligned with sibling div -->
+        <div style="background: yellow" hflex="2">2</div>
+    </div>
+</zk>

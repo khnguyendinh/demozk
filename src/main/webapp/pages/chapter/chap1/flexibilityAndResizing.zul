@@ -1,0 +1,23 @@
+<zk>
+    <zscript><![CDATA[
+        int[] str = new int[100];
+        for(int i=0;i<100;i++){
+            str[i]=i;
+        }
+    ]]>
+    </zscript>
+    <div height="100%" width="300px">
+        Top of tree
+        <tree vflex="1">
+            <treechildren>
+                <treeitem forEach="${str}" label="item${each}"/>
+            </treechildren>
+        </tree>
+        <tree vflex="2">
+            <treechildren>
+                <treeitem forEach="${str}" label="item${each}"/>
+            </treechildren>
+        </tree>
+        Bottom of tree1
+    </div>
+</zk>

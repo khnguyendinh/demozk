@@ -1,0 +1,12 @@
+<zk>
+    <!-- this example does not work -->
+    <div width="200px">
+        <span style="background: blue" hflex="1">1</span>
+        <span style="background: yellow" hflex="2">2</span>
+    </div>
+    <!-- this is correct -->
+    <hlayout width="200px">
+        <div style="background: blue" hflex="1">1</div>
+        <div style="background: yellow" hflex="2">2</div>
+    </hlayout>
+</zk>

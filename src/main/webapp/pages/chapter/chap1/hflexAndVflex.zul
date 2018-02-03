@@ -143,7 +143,26 @@
             <vlayout width="300px" height="200px">
                 <div height="100%">
                     <datebox/>
-                    <div height="100%"/>
+                    <grid>
+                        <rows>
+                            <row>
+                                <a href="/pages/chapter/chap1/flexibilityAndResizing.zul">Flexibility and Resizing</a>
+                            </row>
+                            <row>
+                                <a href="/pages/chapter/chap1/spanIgnoresWidthAndHeight.zul">Span Ignores Width and
+                                    Height
+                                </a>
+                            </row>
+                            <row>
+                                <a href="/pages/chapter/chap1/hflexMustAlignCorrectly.zul">Hflex Must Align Correctly
+                                </a>
+                            </row>
+                        </rows>
+                    </grid>
+                    <div >
+                        <a href="/pages/chapter/chap1/zscript.zul">Zscript,_java,_EL</a>
+                    </div>
+
                 </div>
             </vlayout>
         </hlayout>
