@@ -14,7 +14,7 @@ public class MyViewModel {
 	}
 
 	@Command
-	@NotifyChange("count")
+	@NotifyChange("count1")
 	public void cmd() {
 		++count;
 	}
