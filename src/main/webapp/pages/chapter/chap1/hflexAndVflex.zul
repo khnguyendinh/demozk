@@ -1,4 +1,5 @@
 <zk>
+    <!--vflex và hflex 1 là theo cha,min là theo child-->
     <label>welcome Hflex and Vflex</label>
     <vlayout style="overflow:auto" tooltiptext="rowSum">
         <hlayout style="overflow:auto" tooltiptext="row1">
@@ -36,6 +37,115 @@
                 <div style="background: blue" hflex="1">1</div>
                 <div style="background: yellow" hflex="2">2</div>
             </hlayout>
+        </hlayout>
+        <hlayout style="overflow:auto;" tooltiptext="row2">
+            <vlayout width="300px" height="300px">
+                <label style="font-size:20px">Minimum flexible</label>
+                <borderlayout vflex="1">
+                    <north vflex="min" title="North">
+                        <borderlayout vflex="min">
+                            <west title="west" vflex="min" flex="true" size="40%">
+                                <div style="background:#B8D335;width:100%;height:100%">
+                                    <label value="40%" style="color:white;font-size:50px"/>
+                                </div>
+                            </west>
+                            <center flex="true" vflex="min">
+                                <div style="background:#E6D92C">
+                                    <label value="60%" style="color:white;font-size:20px"/>
+                                </div>
+                            </center>
+                        </borderlayout>
+                    </north>
+                    <center>
+                        <label value="This is the working area" style="font-size:30px"/>
+                    </center>
+                </borderlayout>
+            </vlayout>
+            <vlayout width="300px" height="200px">
+                <vlayout hflex="min" height="75px">
+                    <div hflex="1" vflex="1" style="background-color:yellow">150px</div>
+                    <div width="100px" vflex="1" style="background-color:cyan">100px</div>
+                    <div width="150px" vflex="1" style="background-color:red">150px</div>
+                </vlayout>
+            </vlayout>
+            <vlayout width="300px" height="200px">
+                <hlayout vflex="min" width="100px">
+                    <div hflex="1" vflex="1" style="background-color:yellow">30px</div>
+                    <div hflex="1" height="20px" style="background-color:cyan">20px</div>
+                    <div hflex="1" height="30px" style="background-color:red">30px</div>
+                </hlayout>
+            </vlayout>
+            <vlayout width="300px" height="200px">
+                <label style="font-size:20px">Grid's Column and Flexibility</label>
+                <grid vflex="1">
+                    <columns>
+                        <column label="Name" hflex="1"/>
+                        <column label="Value" hflex="2"/>
+                    </columns>
+                    <rows>
+                        <row>username:<textbox hflex="1"/> </row>
+                        <row>password:<textbox hflex="1"/> </row>
+                    </rows>
+                </grid>
+            </vlayout>
+            <vlayout width="300px" height="200px">
+                <grid hflex="min">
+                    <columns>
+                        <column hflex="min" align="right"/>
+                        <column hflex="min" />
+                    </columns>
+                    <rows>
+                        <row>
+                            <label value="Name:"/>
+                            <textbox/>
+                        </row>
+                        <row>
+                            <label value="Birthday"/>
+                            <datebox hflex="1"/>
+                        </row>
+                    </rows>
+                </grid>
+            </vlayout>
+        </hlayout>
+        <hlayout style="overflow:auto;" tooltiptext="row3">
+            <vlayout hflex="min" vflex="min">
+                <label style="font-size:20px">Cell colspan</label>
+                <grid hflex="min">
+                    <columns>
+                        <column hflex="min" align="right"/>
+                        <column hflex="min"/>
+                        <column hflex="min" align="right"/>
+                        <column hflex="min"/>
+                    </columns>
+                    <rows>
+                        <row>
+                            <label value="Name:"/>
+                            <textbox/>
+                            <label value="Birthday:"/>
+                            <datebox/>
+                        </row>
+                        <row>
+                            <label value="Address"/>
+                            <cell colspan="3">
+                                <textbox rows="5" hflex="1"/>
+                            </cell>
+                        </row>
+                    </rows>
+                </grid>
+            </vlayout>
+            <vlayout vflex="min" hflex="min">
+                <label value="Flexibility versus Percentage"/>
+                <div width="200px" height="200px">
+                    <div height="33%" style="background-color:red">1</div>
+                    <div height="66%" style="background-color:blue">2</div>
+                </div>
+            </vlayout>
+            <vlayout width="300px" height="200px">
+                <div height="100%">
+                    <datebox/>
+                    <div height="100%"/>
+                </div>
+            </vlayout>
         </hlayout>
     </vlayout>
 
