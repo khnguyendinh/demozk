@@ -1,4 +1,4 @@
-<window id="win1" >
+<window id="win1" use="MyWindow" >
     <!-- https://www.zkoss.org/wiki/Zscript,_java,_EL -->
     <zscript><![CDATA[
         win1.title="demo zscript";
