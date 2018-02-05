@@ -1,3 +1,9 @@
 <zk>
 <label value="Chapter 3"/>
+    <div>
+        <a href="/pages/chapter/chap3/mVC1.zul">MVC1</a>
+    </div>
+    <div>
+        <a href="/pages/chapter/chap3/mVVC2.zul">MVVC</a>
+    </div>
 </zk>
