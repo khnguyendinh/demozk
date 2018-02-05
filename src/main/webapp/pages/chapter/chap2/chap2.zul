@@ -1,0 +1,13 @@
+<zk>
+    <label value="Chap2"/>
+    <grid hflex="1" vflex="1" sclass="sidebar">
+        <rows>
+            <row sclass="sidebar-fn" >
+                <a href="/pages/chapter/chap2/controllerInZscript.zul">controllerInZscript</a>
+            </row>
+            <row sclass="sidebar-fn" >
+                <a href="/pages/chapter/chap2/controllerInJava.zul">controllerInJava</a>
+            </row>
+        </rows>
+    </grid>
+</zk>

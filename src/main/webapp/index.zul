@@ -14,7 +14,7 @@
             <a href="/pages/car/searchMvc.zul">searchMvc.zul</a>
             <a href="/pages/car/searchMvvm.zul">searchMvvm.zul</a>
             <a href="/pages/chapter/chap1/chapter1.zul">Chapter 1</a>
-            <a href="/pages/chapter/chap1/chap2.zul">Chapter 2</a>
+            <a href="/pages/chapter/chap2/chap2.zul">Chapter 2 Controlling Components</a>
             <a href="/pages/chapter/chap3/chap3.zul">Chapter 3</a>
         </vlayout>
     </window>

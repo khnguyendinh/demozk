@@ -6,5 +6,6 @@ pack="center" spacing="20px">
     <a href="/pages/chapter/chap1/caption.zul">demo Caption</a>
     <a href="/pages/chapter/chap1/hbox.zul">demo Hbox</a>
     <a href="/pages/chapter/chap1/image.zul">demo Image</a>
+    <a href="/pages/chapter/chap1/applyCss.zul">demo Apply CSS</a>
 
 </vbox>
