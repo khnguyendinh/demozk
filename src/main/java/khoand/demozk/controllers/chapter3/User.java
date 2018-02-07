@@ -1,11 +1,12 @@
 package khoand.demozk.controllers.chapter3;
 
+import com.google.gson.Gson;
 import org.zkoss.zk.ui.select.annotation.Wire;
 import org.zkoss.zul.Datebox;
 import org.zkoss.zul.Label;
 import org.zkoss.zul.Listbox;
 import org.zkoss.zul.Textbox;
-
+import com.google.gson.*;
 import java.util.Date;
 
 /**
@@ -65,5 +66,10 @@ public class User {
 
     public void setBio(String bio) {
         this.bio = bio;
+    }
+
+    @Override
+    public String toString() {
+        return new Gson().toJson(this);
     }
 }

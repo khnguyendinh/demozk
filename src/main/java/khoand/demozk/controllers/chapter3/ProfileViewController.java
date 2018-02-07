@@ -35,18 +35,20 @@ public class ProfileViewController extends SelectorComposer<Component>{
         super.doAfterCompose(comp);
 
         ListModelList<String> countryModel = new ListModelList<String>(CommonInfoService.getCountryList());
+        System.out.println("size "+countryModel.size());
         country.setModel(countryModel);
 
         refreshProfileView();
     }
     private void refreshProfileView() {
         UserCredential cre = authService.getUserCredential();
+        System.out.println("value "+cre.getAccount());
         User user = userInfoService.findUser(cre.getAccount());
         if(user==null){
             //TODO handle un-authenticated access
             return;
         }
-
+        System.out.println("user "+user.toString());
         //apply bean value to UI components
         account.setValue(user.getAccount());
         fullName.setValue(user.getFullName());
@@ -58,6 +60,7 @@ public class ProfileViewController extends SelectorComposer<Component>{
     }
     @Listen("onClick=#saveProfile")
     public void doSaveProfile(){
+        alert("doSaveProfile");
         UserCredential cre = authService.getUserCredential();
         User user = userInfoService.findUser(cre.getAccount());
         if(user==null){
