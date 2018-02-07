@@ -1,0 +1,13 @@
+<zk>
+    Location: <textbox onChange="updateMap(self.value)"/>
+    Map: <image id="image"/>
+    <zscript><![CDATA[
+        void updateMap(String location) {
+            if (location.length() > 0) {
+                org.zkoss.image.AImage img = new org.zkoss.image.AImage(location);
+                image.setContent(img);
+            }
+        }
+    ]]>
+    </zscript>
+</zk>

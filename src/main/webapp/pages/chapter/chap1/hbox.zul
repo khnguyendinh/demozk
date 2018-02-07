@@ -1,0 +1,6 @@
+<zk >
+    <hbox height="200px" width="200px" style="border: 1px solid red">
+        <textbox hflex="1" value="1" />
+        <textbox hflex="1" value="1" />
+    </hbox>
+</zk>

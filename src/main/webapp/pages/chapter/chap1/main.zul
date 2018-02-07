@@ -2,5 +2,10 @@
 pack="center" spacing="20px">
     <image src="/img/car1.png"/>
     <label value="Chapter 3" sclass="head1"/>
+    <a href="/pages/chapter/chap1/hflexAndVflex.zul">demo Hflex and Vflex</a>
+    <a href="/pages/chapter/chap1/caption.zul">demo Caption</a>
+    <a href="/pages/chapter/chap1/hbox.zul">demo Hbox</a>
+    <a href="/pages/chapter/chap1/image.zul">demo Image</a>
+    <a href="/pages/chapter/chap1/applyCss.zul">demo Apply CSS</a>
 
 </vbox>

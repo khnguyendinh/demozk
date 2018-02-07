@@ -1,0 +1,11 @@
+<zk>
+    <groupbox id="gb" mold="3d" width="300px">
+        <caption image="/img/car1.png" label="Enable Backups"/>
+        <hbox>
+            <label value="Directory:"/>
+            <textbox value="/home/zk/projects"/>
+        </hbox>
+        <checkbox label="Compress archived files"/>
+    </groupbox>
+    <caption image="/img/car1.png" label="Image caption"/>
+</zk>

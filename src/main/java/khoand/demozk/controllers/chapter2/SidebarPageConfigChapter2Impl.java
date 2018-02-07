@@ -14,19 +14,21 @@ import java.util.List;
 public class SidebarPageConfigChapter2Impl implements SidebarPageConfig {
     HashMap<String,SidebarPage> pageMap = new LinkedHashMap<String,SidebarPage>();
     public SidebarPageConfigChapter2Impl(){
-        pageMap.put("fn1",new SidebarPage("zk","ZK","/img/nice2.png","http://www.zkoss.org/"));
+        pageMap.put("fn1",new SidebarPage("zk","ZK1","/img/nice2.png","http://www.zkoss.org/"));
         pageMap.put("fn2",new SidebarPage("demo","ZK Demo","/img/nice2.png","http://www.zkoss.org/zkdemo"));
         pageMap.put("fn3",new SidebarPage("devref","ZK Developer Reference","/img/nice2.png","http://books.zkoss.org/wiki/ZK_Developer's_Reference"));
     }
     public List<SidebarPage> getPages() {
 
         List<SidebarPage> arList = new ArrayList<SidebarPage>();
-
-        for(HashMap.Entry<String,SidebarPage> map : pageMap.entrySet()){
-
-            arList.add(map.getValue());
-
-        }
+        arList.add(new SidebarPage("zk","ZK1112","/img/nice2.png","http://www.zkoss.org/"));
+        arList.add(new SidebarPage("demo","ZK Demo","/img/nice2.png","http://www.zkoss.org/zkdemo"));
+        arList.add(new SidebarPage("devref","ZK Developer Reference","/img/nice2.png","http://books.zkoss.org/wiki/ZK_Developer's_Reference"));
+//        for(HashMap.Entry<String,SidebarPage> map : pageMap.entrySet()){
+//
+//            arList.add(map.getValue());
+//
+//        }
         return arList;
     }
 
