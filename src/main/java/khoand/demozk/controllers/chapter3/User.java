@@ -13,12 +13,12 @@ import java.util.Date;
  * Created by quantri on 07/02/2018.
  */
 public class User {
-    String account;
-    String fullName;
-    String email;
-    Date birthday;
-    String country;
-    String bio;
+    private String account;
+    private String fullName;
+    private String email;
+    private Date birthday;
+    private String country;
+    private String bio;
 
     public String getAccount() {
         return account;

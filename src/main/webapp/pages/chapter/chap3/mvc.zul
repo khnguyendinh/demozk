@@ -12,7 +12,7 @@
             <rows>
                 <row>
                     <cell sclass="row-title">Account :</cell>
-                    <cell><label id="account"/></cell>
+                    <cell><label id="fName"/></cell>
                 </row>
                 <row>
                     <cell sclass="row-title">Full Name :</cell>

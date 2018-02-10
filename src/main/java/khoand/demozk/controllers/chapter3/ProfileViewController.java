@@ -37,20 +37,20 @@ public class ProfileViewController extends SelectorComposer<Component>{
         ListModelList<String> countryModel = new ListModelList<String>(CommonInfoService.getCountryList());
         System.out.println("size "+countryModel.size());
         country.setModel(countryModel);
-
-        refreshProfileView();
+//        clearInput();
     }
     private void refreshProfileView() {
         UserCredential cre = authService.getUserCredential();
-        System.out.println("value "+cre.getAccount());
-        User user = userInfoService.findUser(cre.getAccount());
+        if(userInfoService.getUserList().size() > 0){
+            cre.setfName(userInfoService.getUserList().get(userInfoService.getUserList().size() - 1).getFullName());
+        }
+        User user = userInfoService.findUser(cre.getfName());
         if(user==null){
-            //TODO handle un-authenticated access
             return;
         }
         System.out.println("user "+user.toString());
         //apply bean value to UI components
-        account.setValue(user.getAccount());
+//        account.setValue(user.getAccount());
         fullName.setValue(user.getFullName());
         email.setValue(user.getEmail());
         birthday.setValue(user.getBirthday());
@@ -60,13 +60,10 @@ public class ProfileViewController extends SelectorComposer<Component>{
     }
     @Listen("onClick=#saveProfile")
     public void doSaveProfile(){
-        alert("doSaveProfile");
         UserCredential cre = authService.getUserCredential();
-        User user = userInfoService.findUser(cre.getAccount());
-        if(user==null){
-            //TODO handle un-authenticated access
-            return;
-        }
+        cre.setfName(fullName.getValue());
+        User user = new User();
+
 
         //apply component value to bean
         user.setFullName(fullName.getValue());
@@ -80,13 +77,24 @@ public class ProfileViewController extends SelectorComposer<Component>{
         }else{
             user.setCountry(null);
         }
-
-        userInfoService.updateUser(user);
-
-        Clients.showNotification("Your profile is updated");
+        if(userInfoService.findUser(cre.getfName()) == null){
+            userInfoService.addUser(user);
+            Clients.showNotification("You add one Profile");
+        }else{
+            userInfoService.updateUser(user);
+            Clients.showNotification("Your profile is updated");
+        }
+        clearInput();
     }
     @Listen("onClick=#reloadProfile")
     public void doReloadProfile(){
         refreshProfileView();
+    }
+    void clearInput(){
+        fullName.setValue("");
+        email.setValue("");
+        country.clearSelection();
+        bio.setValue("");
+        birthday.setText(null);
     }
 }
