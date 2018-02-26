@@ -10,7 +10,7 @@ public interface UserInfoService {
     List<User> userList = new ArrayList<User>();
     User findUser(String account);
 
-    void updateUser(User user);
+    User updateUser(User user);
 
     boolean addUser(User user);
     List<User> getUserList();

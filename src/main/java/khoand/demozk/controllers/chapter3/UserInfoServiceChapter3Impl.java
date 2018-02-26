@@ -1,6 +1,5 @@
 package khoand.demozk.controllers.chapter3;
 
-import java.util.Date;
 import java.util.List;
 
 /**
@@ -26,14 +25,15 @@ public class UserInfoServiceChapter3Impl implements UserInfoService {
         return null;
     }
 
-    public void updateUser(User user) {
+    public User updateUser(User user) {
         for (User user1: userList ) {
             if(user1.getFullName() != null && user1.getFullName().equals(user.getFullName())){
                 userList.remove(user1);
                 userList.add(user);
-                return;
+                return user1;
             }
         }
+        return user;
     }
 
     public boolean addUser(User user) {

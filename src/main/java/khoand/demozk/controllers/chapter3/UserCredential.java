@@ -5,6 +5,7 @@ package khoand.demozk.controllers.chapter3;
  */
 public class UserCredential {
     private String fName = "";
+    private String account = "";
 
     public String getfName() {
         return fName;
@@ -12,5 +13,9 @@ public class UserCredential {
 
     public void setfName(String fName) {
         this.fName = fName;
+    }
+
+    public String getAccount() {
+        return account;
     }
 }
